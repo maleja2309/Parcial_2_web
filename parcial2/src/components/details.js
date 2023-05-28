@@ -1,48 +1,61 @@
 import React from "react";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Card from 'react-bootstrap/Card';
 import { useParams } from "react-router-dom";
 import Productos from "./productos";
+import Container from 'react-bootstrap/Container';
 
 const { useEffect } = require("react");
 
-function Details(params) {
-
-    //const params = useParams();
+function Details() {
+    const params = useParams();
     const [product, setProduct] = useState([]);
 
-    const URL = "http://localhost:3001/cafes/" + params.id;
-    fetch(URL).then(data => data.json()).then(data => {
-        setProduct(data);
-    })
+    useEffect(() => {
+        const URL = "http://localhost:3001/cafes/" + params.id;
+        fetch(URL).then(data => data.json()).then(data => {
+            setProduct(data);
+        })
+    }, [params.id]);
 
     return (
-        <div>
-            <Card border="dart" style={{ width: '18rem' }}>
-                <Card.Body>
-                    <Card.Text>
-                        {product.nombre}
-                    </Card.Text>
-                    <Card.Text>
-                        {product.fecha_cultivo}
-                    </Card.Text>
-                    <img
-                        src={product.imagen}
-                        width="80%" />
-                    <Card.Text>
-                        Notas
-                    </Card.Text>
-                    <Card.Text>
-                        {product.notas}
+        <div className="App">
+            <Container>
+                <Row>
+                    <Col>
+                        <Productos />
+                    </Col>
 
-                    </Card.Text>
-                    <Card.Text>
-                        Cultivado a la altura de {product.altura} msnm
-                    </Card.Text>
-                </Card.Body>
-            </Card>
+                    <Card border="dart" style={{ width: '18rem' }}>
+
+                        <Card.Body>
+                            <Card.Text>
+                                {product.nombre}
+                            </Card.Text>
+                            <Card.Text>
+                                {product.fecha_cultivo}
+                            </Card.Text>
+                            <img
+                                src={product.imagen}
+                                width="80%" />
+                            <Card.Text>
+                                Notas
+                            </Card.Text>
+                            <Card.Text>
+                                {product.notas}
+
+                            </Card.Text>
+                            <Card.Text>
+                                Cultivado a la altura de {product.altura} msnm
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+
+                </Row>
+            </Container>
         </div >
     );
 }
