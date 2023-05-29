@@ -5,7 +5,7 @@ import Productos from "./components/productos";
 import Details from "./components/details";
 import Header from "./components/header";
 import Auth from "./components/autenticacion";
-
+import Footer from "./components/footer";
 function App() {
   return (
     <div className="App">
@@ -18,6 +18,7 @@ function App() {
           <Route path="/cafes/:id" element={<Details />} />
         </Routes>
       </BrowserRouter>
+      <Footer></Footer>
     </div>
   );
 }
