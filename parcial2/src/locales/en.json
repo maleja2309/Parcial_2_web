@@ -1,0 +1,13 @@
+{
+    "Prod_name": "Name",
+    "Prod_type": "Type",
+    "Prod_region": "Region",
+    "Deta_notes": "Coffee notes",
+    "Deta_grow": "Grown at a height of",
+    "Auth_user": "User name",
+    "Auth_pass": "Password",
+    "Auth_login": "Login",
+    "Auth_calcel": "Cancel",
+    "Auth_sign_in": "Sign in",
+    "Auth_": "The provided credentials are incorrect."
+}

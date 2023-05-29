@@ -1,0 +1,13 @@
+{
+    "Prod_name": "Nombre",
+    "Prod_type": "Tipo",
+    "Prod_region": "Región",
+    "Deta_notes": "Notas",
+    "Deta_grow": "Cultivado a la altura de",
+    "Auth_login": "Inicio de sesión",
+    "Auth_user": "Nombre Usuario",
+    "Auth_pass": "Contraseña",
+    "Auth_calcel": "Cancelar",
+    "Auth_sign_in": "Ingresar",
+    "Auth_": "Error de autenticación. Revise sus credenciales"
+}

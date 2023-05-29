@@ -8,7 +8,9 @@ function Header() {
     return (
         <div >
             <Container>
-                <h1>El aroma mágico</h1>
+                <div align="left">
+                    <h1>El aroma mágico</h1>
+                </div>
                 <br></br>
                 <Row className="justify-content-md-center">
                     <img

@@ -7,6 +7,7 @@ import Card from 'react-bootstrap/Card';
 import { useParams } from "react-router-dom";
 import Productos from "./productos";
 import Container from 'react-bootstrap/Container';
+import { FormattedMessage } from 'react-intl';
 
 const { useEffect } = require("react");
 
@@ -42,14 +43,14 @@ function Details() {
                                 src={product.imagen}
                                 width="80%" />
                             <Card.Text>
-                                Notas
+                                <FormattedMessage id="Deta_notes" />
                             </Card.Text>
                             <Card.Text>
                                 {product.notas}
 
                             </Card.Text>
                             <Card.Text>
-                                Cultivado a la altura de {product.altura} msnm
+                                <FormattedMessage id="Deta_grow" /> {product.altura} msnm
                             </Card.Text>
                         </Card.Body>
                     </Card>

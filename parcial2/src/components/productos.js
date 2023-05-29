@@ -1,12 +1,8 @@
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Details from './details';
-import Container from 'react-bootstrap/Container';
 import Cafe from './producto';
-
-import Table from 'react-bootstrap/Table';
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { FormattedMessage } from 'react-intl';
 
 const { useEffect } = require("react");
 
@@ -29,9 +25,9 @@ function Productos() {
                         <thead className={"table-dark"}>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">Nombre</th>
-                                <th scope="col">Tipo</th>
-                                <th scope="col">Región</th>
+                                <th scope="col"><FormattedMessage id="Prod_name" /></th>
+                                <th scope="col"><FormattedMessage id="Prod_type" /></th>
+                                <th scope="col"><FormattedMessage id="Prod_region" /></th>
                             </tr>
                         </thead>
                         <tbody>
